@@ -20,6 +20,21 @@ AAAA-proyecto/
 
 Los archivos dentro de `jpg/` y `webp/` se nombran con números de dos dígitos empezando en `00`, en el mismo orden que las fotos originales.
 
+## Modelos 3D
+
+Los modelos 3D van en una subcarpeta `glb/` dentro de la carpeta del proyecto:
+
+```text
+AAAA-proyecto/
+  glb/    modelos 3D en formato .glb
+```
+
+Por ejemplo, el escaneo 3D de la página de inicio de montoyamoraga.github.io está en `2026-escaneo-3d/glb/montoyamoraga-2026-08.glb`, y se carga desde:
+
+```text
+https://cdn.jsdelivr.net/gh/montoyamoraga/montoyamoraga-web-media@main/2026-escaneo-3d/glb/montoyamoraga-2026-08.glb
+```
+
 ## Generación de previews webp
 
 Las imágenes en `webp/` se generan automáticamente a partir de las que están en `jpg/`, usando [`scripts/generar-webp.sh`](scripts/generar-webp.sh) y `cwebp`.
