@@ -7,6 +7,7 @@ on:
     paths:
       - "**/jpg/*.jpg"
       - "**/jpg/*.jpeg"
+      - "**/png/*.png"
       - "scripts/generar-webp.sh"
 
 permissions:
@@ -16,14 +17,14 @@ jobs:
   generar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
 
       - name: Instalar cwebp
         run: sudo apt-get update && sudo apt-get install -y webp
 
-      - name: Generar webp desde jpg
+      - name: Generar webp desde jpg y png
         run: ./scripts/generar-webp.sh
 
       - name: Commitear webp generados
