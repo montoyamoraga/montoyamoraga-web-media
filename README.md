@@ -10,15 +10,16 @@ Cada proyecto vive en su propia carpeta en la raíz del repositorio, con el nomb
 AAAA-proyecto
 ```
 
-Dentro de cada carpeta de proyecto, las fotos se organizan en dos subcarpetas:
+Dentro de cada carpeta de proyecto, las imágenes se organizan en subcarpetas según su formato:
 
 ```text
 AAAA-proyecto/
-  jpg/    fotos originales (00.jpg, 01.jpg, ...)
-  webp/   previews en formato webp, generadas automáticamente a partir de jpg/
+  jpg/   fotos originales en jpg (00.jpg, 01.jpg, ...)
+  png/   imágenes originales en png (00-portada.png, ...)
+  webp/  previews en formato webp, generadas automáticamente a partir de jpg/ y png/
 ```
 
-Los archivos dentro de `jpg/` y `webp/` se nombran con números de dos dígitos empezando en `00`, en el mismo orden que las fotos originales.
+Los archivos se nombran con números de dos dígitos empezando en `00`, opcionalmente seguidos de una descripción (por ejemplo `00-portada.png`). Cada `.webp` mantiene el mismo nombre que su original.
 
 ## Fotos de cursos
 
@@ -53,9 +54,9 @@ previstas/
 
 ## Generación de previews webp
 
-Las imágenes en `webp/` se generan automáticamente a partir de las que están en `jpg/`, usando [`scripts/generar-webp.sh`](scripts/generar-webp.sh) y `cwebp`.
+Las imágenes en `webp/` se generan automáticamente a partir de las que están en `jpg/` y `png/`, usando [`scripts/generar-webp.sh`](scripts/generar-webp.sh) y `cwebp`.
 
-Esto corre solo, mediante el GitHub Action [`generar-webp.yml`](.github/workflows/generar-webp.yml): cada vez que se sube una foto nueva a una carpeta `jpg/` en `main`, el workflow genera los `.webp` correspondientes y los commitea de vuelta al repositorio.
+Esto corre solo, mediante el GitHub Action [`generar-webp.yml`](.github/workflows/generar-webp.yml): cada vez que se sube una imagen nueva a una carpeta `jpg/` o `png/` en `main`, el workflow genera los `.webp` correspondientes y los commitea de vuelta al repositorio.
 
 También se puede correr a mano desde la raíz del repositorio:
 
@@ -63,4 +64,4 @@ También se puede correr a mano desde la raíz del repositorio:
 scripts/generar-webp.sh
 ```
 
-Esto requiere tener `cwebp` instalado (en macOS: `brew install webp`). El script recorre todas las carpetas `jpg/` del repositorio y genera los `.webp` que falten o estén desactualizados en la carpeta `webp/` correspondiente.
+Esto requiere tener `cwebp` instalado (en macOS: `brew install webp`). El script recorre todas las carpetas `jpg/` y `png/` del repositorio y genera los `.webp` que falten o estén desactualizados en la carpeta `webp/` correspondiente.
