@@ -35,6 +35,16 @@ Por ejemplo, el escaneo 3D de la página de inicio de montoyamoraga.github.io es
 https://cdn.jsdelivr.net/gh/montoyamoraga/montoyamoraga-web-media@main/2026-escaneo-3d/glb/montoyamoraga-2026-08.glb
 ```
 
+## Previstas
+
+La carpeta `previstas/` tiene las imágenes que se muestran al compartir un enlace de montoyamoraga.github.io en WhatsApp o redes sociales (etiqueta `og:image`). Cada prevista mide 1200×630 y pesa menos de 300 KB, porque WhatsApp no muestra imágenes más pesadas.
+
+```text
+previstas/
+  sitio.jpg               prevista por defecto del sitio
+  ensenanza-<curso>.jpg   prevista de cada curso, por ejemplo ensenanza-dis8636.jpg
+```
+
 ## Generación de previews webp
 
 Las imágenes en `webp/` se generan automáticamente a partir de las que están en `jpg/`, usando [`scripts/generar-webp.sh`](scripts/generar-webp.sh) y `cwebp`.
