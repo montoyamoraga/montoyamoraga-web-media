@@ -20,6 +20,12 @@ AAAA-proyecto/
 
 Los archivos dentro de `jpg/` y `webp/` se nombran con números de dos dígitos empezando en `00`, en el mismo orden que las fotos originales.
 
+## Fotos de cursos
+
+Las fotos de los cursos de enseñanza de montoyamoraga.github.io van en una carpeta por curso, `ensenanza-<curso>/jpg/`. Mantienen su nombre de archivo original, que identifica a les autores de cada trabajo (por ejemplo `ensenanza-dis8636/jpg/dis8636-theo-rios.jpg`), y se listan por ese nombre en `datos/ensenanza.yaml` del sitio. El sitio muestra la versión de `webp/`.
+
+Las fotos deben quedar derechas en sus píxeles: `cwebp` ignora la orientación EXIF de las fotos de celular, así que una foto que solo se ve derecha gracias a EXIF queda girada en `webp/`.
+
 ## Modelos 3D
 
 Los modelos 3D van en una subcarpeta `glb/` dentro de la carpeta del proyecto:
