@@ -27,6 +27,15 @@ Las fotos de los cursos de enseñanza de montoyamoraga.github.io van en una carp
 
 Las fotos deben quedar derechas en sus píxeles: `cwebp` ignora la orientación EXIF de las fotos de celular, así que una foto que solo se ve derecha gracias a EXIF queda girada en `webp/`.
 
+## GIF animados
+
+Los GIF animados van en una subcarpeta `gif/` dentro de la carpeta del proyecto, con la misma numeración que el resto de las imágenes. No se convierten a webp: el sitio los muestra directamente desde `gif/`.
+
+```text
+AAAA-proyecto/
+  gif/    animaciones en formato .gif
+```
+
 ## Modelos 3D
 
 Los modelos 3D van en una subcarpeta `glb/` dentro de la carpeta del proyecto:
