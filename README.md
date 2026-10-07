@@ -21,6 +21,8 @@ AAAA-proyecto/
 
 Los archivos se nombran con números de dos dígitos empezando en `00`, opcionalmente seguidos de una descripción (por ejemplo `00-portada.png`). Cada `.webp` mantiene el mismo nombre que su original.
 
+Excepción: en las colecciones de videos fechados, los archivos se nombran solo con su fecha (`AAAA-MM-DD.mp4`), y la fecha define el orden. Por ejemplo `2026-callese-hombre/mp4/2026-09-16.mp4`.
+
 ## Fotos de cursos
 
 Las fotos de los cursos de enseñanza de montoyamoraga.github.io van en una carpeta por curso, `ensenanza-<curso>/jpg/`. Mantienen su nombre de archivo original, que identifica a les autores de cada trabajo (por ejemplo `ensenanza-dis8636/jpg/dis8636-theo-rios.jpg`), y se listan por ese nombre en `datos/ensenanza.yaml` del sitio. El sitio muestra la versión de `webp/`.
