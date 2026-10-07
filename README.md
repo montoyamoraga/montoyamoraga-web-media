@@ -38,6 +38,15 @@ AAAA-proyecto/
   gif/    animaciones en formato .gif
 ```
 
+## SVG
+
+Las imágenes vectoriales van en una subcarpeta `svg/` dentro de la carpeta del proyecto, con la misma numeración que el resto de las imágenes. Tampoco se convierten a webp: el sitio las muestra directamente desde `svg/`. Por ejemplo, los paneles de los módulos de VCV Rack en `2026-menatron/svg/`.
+
+```text
+AAAA-proyecto/
+  svg/    imágenes vectoriales en formato .svg
+```
+
 ## Modelos 3D
 
 Los modelos 3D van en una subcarpeta `glb/` dentro de la carpeta del proyecto:
